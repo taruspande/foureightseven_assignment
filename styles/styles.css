@@ -1,0 +1,48 @@
+/* Carousel */
+
+.carousel-wrapper {
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    width: 100%;
+}
+
+.carousel {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: relative;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
+
+.carousel-image.active {
+    display: block;
+}
+
+.carousel-buttons {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.carousel-button {
+    width: 70px;
+    height: 70px;
+    border: 2px solid black;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-size: cover;
+}
+
+.carousel-button.selected {
+    border-color: white;
+}
