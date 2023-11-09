@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.15/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Life+Savers:wght@400;700;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/c4e967a659.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./styles/styles.css">
-    <script src="script.js"></script>
     <title>"Drizzle" & "Sizzle"</title>
 </head>
 
-<body style="background-color: #F6E6D9;">
+<body style="color: #3c422e; background-color: #F6E6D9;">
     <div class="carousel-wrapper">
         <div class="carousel">
             <img src="./assets/1.png" class="carousel-image active" alt="Image 1">
@@ -31,7 +35,106 @@
         </div>
     </div>
 
-    <script src="./scripts/script.js"></script>
+    <div class="right-content">
+        <div class="text-content">
+            <p class="first-line">"Drizzle" & "Sizzle"</p>
+            <p class="second-line">Extra Virgin Olive Oil</p>
+        </div>
+        <div class="reviews-section">
+            <div class="stars-container">
+                <i class="fas fa-star" style="color: #3c422e;"></i>
+                <i class="fas fa-star" style="color: #3c422e;"></i>
+                <i class="fas fa-star" style="color: #3c422e;"></i>
+                <i class="fas fa-star" style="color: #3c422e;"></i>
+                <i class="fas fa-star" style="color: #3c422e;"></i>
+            </div>
+            <p class="review-text">885 Reviews</p>
+        </div>
+        <div class="quantity-box">
+            <p class="heading">Quantity</p>
+            <div class="quantity-options">
+                <div class="quantity-item selected" onclick="selectQuantity(0)">
+                    <p style="font-size: 1rem; font-weight: 700;">1</p>
+                    <p style="font-size: 18px;">Set</p>
+                    <p style="font-size: 0.625rem;">+10% Off</p>
+                </div>
+                <div class="quantity-item" onclick="selectQuantity(1)">
+                    <p style="font-size: 1rem; font-weight: 700;">2</p>
+                    <p style="font-size: 18px;">Sets</p>
+                    <p style="font-size: 0.625rem;">Free Shipping!</p>
+                    <p style="font-size: 0.625rem;">+14% Off</p>
+                </div>
+                <div class="quantity-item" onclick="selectQuantity(2)">
+                    <p style="font-size: 1rem; font-weight: 700;">3</p>
+                    <p style="font-size: 18px;">Sets</p>
+                    <p style="font-size: 0.625rem;">Free Shipping!</p>
+                    <p style="font-size: 0.625rem;">+15% Off</p>
+                </div>
+                <div class="quantity-item" onclick="selectQuantity(3)">
+                    <p style="font-size: 1rem; font-weight: 700;">6</p>
+                    <p style="font-size: 18px;">Sets</p>
+                    <p style="font-size: 0.625rem;">Free Shipping!</p>
+                    <p style="font-size: 0.625rem;">+17% Off</p>
+                </div>
+            </div>
+            <hr style="border: 1px dashed; ">
+            <div class="purchase-options">
+                <div class="row">
+                    <div class="purchase-btn" onclick="purchaseMethod(0)"></div>
+                    <p style="word-spacing: 0.75rem; font-weight: 900;">One Time Purchase</p>
+                </div>
+                <hr style="border: 1px dashed; ">
+                <div class="row">
+                    <div class="purchase-btn selected" onclick="purchaseMethod(1)"></div>
+                    <p style="word-spacing: 0.75rem; font-weight: 900;">Subscribe & Save</p>
+                </div>
+                <div class="frequency" onclick="openDropDown()">
+                    <ul>
+                        <li class="frequency-item visible" onclick="selectOption(0)">Frequency: Every 1 Month</li>
+                        <li class="frequency-item" onclick="selectOption(1)">Frequency: Every 2 Months</li>
+                        <li class="frequency-item" onclick="selectOption(2)">Frequency: Every 3 Months</li>
+                    </ul>
+                </div>
+            </div>
+            <hr style="border: 1px dashed; ">
+            <div class="subscribe-btn">
+                <p style="font-weight: 900;">Subscribe - $33.30</p>
+            </div>
+            <div class="cancel">
+                <p style="font-size: 0.625rem; word-spacing: 0.3rem;">Skip or Cancel Anytime</p>
+            </div>
+        </div>
+        <div class="description-btns">
+            <div class="desc-toggle desc selected" onclick="selectDesc(0)">
+                <p style="font-size: 1.25rem; font-family: 'Life Savers', serif; font-weight: 900;">Description</p>
+            </div>
+            <div class="desc-toggle harvest" onclick="selectDesc(1)">
+                <p style="font-size: 1.25rem; font-family: 'Life Savers', serif; font-weight: 900;">Harvest</p>
+            </div>
+            <div class="desc-toggle use" onclick="selectDesc(2)">
+                <p style="font-size: 1.25rem; font-family: 'Life Savers', serif; font-weight: 900;">Use Case</p>
+            </div>
+        </div>
+        <div class="description">
+            <p class="description-text desc-text visible" style="text-align: left; margin-left: 5px; margin-bottom: 7px; margin-top: 10px; font-weight: 900; font-family: 'Life Savers', serif; font-size: 1.25rem;">DRIZZLE: 500ML</p>
+            <p class="description-text desc-text visible" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-family: 'Life Savers', serif; font-size: 1rem;">Extra Virgin finishing oil made from olives that are picked early, when flavor is bold and antioxidants are highest. Made for eating, never heating.</p>
+            <p class="description-text desc-text visible" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-weight: 900; font-family: 'Life Savers', serif; font-size: 1.25rem;">SIZZLE: 750ML</p>
+            <p class="description-text desc-text visible" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-family: 'Life Savers', serif; font-size: 1rem;">Extra Virgin cooking oil made from mature, mid-season olives that yield a more mellow flavor. Use it every day, in every way.</p>
+            <p class="description-text desc-text visible" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-weight: 900; font-family: 'Life Savers', serif; font-size: 1rem;">*HEADS UP! MULTIPLE SETS OF DRIZZLE & SIZZLE SHIP IN THE SAME BOX! TO ORDER INDIVIDUALLY PACKAGED GIFT SETS, CLICK HERE! 🎁</p> 
+
+            <p class="description-text harvest-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; margin-top: 10px; font-weight: 900; font-family: 'Life Savers', serif; font-size: 1.25rem;">DRIZZLE:</p>
+            <p class="description-text harvest-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-family: 'Life Savers', serif; font-size: 1rem;">Harvested in October, before the olives have ripened fully. Picked by hand because young olives need a firm yank to loosen up.</p>
+            <p class="description-text harvest-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-weight: 900; font-family: 'Life Savers', serif; font-size: 1.25rem;">SIZZLE:</p>
+            <p class="description-text harvest-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-family: 'Life Savers', serif; font-size: 1rem;">Harvested in November and December, when the olives are more mature. They’re pretty laid back by this point, so it only takes a few shakes to get them off the branch.</p>
+
+            <p class="description-text use-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; margin-top: 10px; font-weight: 900; font-family: 'Life Savers', serif; font-size: 1.25rem;">DRIZZLE:</p>
+            <p class="description-text use-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-family: 'Life Savers', serif; font-size: 1rem;">A little Drizzle goes a long way! Use it on and around things like ice cream, pesto, popcorn, salads, sandwiches or even directly on your tongue (we won’t tell).</p>
+            <p class="description-text use-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-weight: 900; font-family: 'Life Savers', serif; font-size: 1.25rem;">SIZZLE:</p>
+            <p class="description-text use-text" style="text-align: left; margin-left: 5px; margin-bottom: 7px; font-family: 'Life Savers', serif; font-size: 1rem;">If you would put it in or on top of an oven, use sizzle. Chicken Cutlets, Sheet Pan Veggies, Fried Rice, or even Chocolate Chip Cookies! You name it, Sizzle sizzles it.</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

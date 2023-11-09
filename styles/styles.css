@@ -46,3 +46,254 @@
 .carousel-button.selected {
     border-color: white;
 }
+
+.right-content {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    right: 0;
+    top: 20%;
+    flex-direction: column;
+
+}
+
+/* Heading */
+
+.text-content {
+    font-family: 'Life Savers', serif;
+    font-size: 3rem;
+}
+
+.second-line {
+    text-decoration: underline;
+}
+
+/* Reviews */
+
+.reviews-section{
+    margin-top: 10px;
+}
+
+.review-text{
+    font-family: 'Life Savers', serif;
+    font-size: 1rem;
+    display: inline-block;
+    margin-left: 5px;
+    font-weight: bold;
+}
+
+.stars-container {
+    display: inline-flex;
+}
+
+.stars-container i {
+    margin-right: 5px;
+}
+
+/* Quantity Box */
+
+.quantity-box {
+    width: 70%;
+    margin: 20px auto;
+    background-color: #FFF4EC;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 10px;
+    font-family: 'Life Savers', serif;
+    font-weight: 700;
+    padding: 1rem;
+}
+
+.quantity-box .heading{
+    text-align: left;
+    margin-left: 4px;
+    margin-bottom: 5px;
+}
+
+.quantity-options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.quantity-item {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 90px;
+    border: 1px solid black;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.quantity-item.selected {
+    background-color: #9EEF80;
+}
+
+.purchase-options .row{
+    display: flex;
+    align-items: center;
+    padding: 12px 0 12px 0;
+}
+
+.purchase-btn{
+    border: 1px solid black;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.purchase-btn.selected{
+    background-color: #9EEF80;
+}
+
+.frequency{
+    border: 1px solid black;
+    margin: 0 3px 0 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.frequency.hidden{
+    display: none;
+}
+
+.frequency:hover{
+    background-color: #F6E6D9;
+}
+
+.frequency-item.visible{
+    display: block;
+}
+
+.frequency-item{
+    display: none;
+}
+
+.subscribe-btn{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    background-color: #D1E030;
+    border-radius: 10px;
+    height: 2.125rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    box-shadow: 5px 5px #F6E6D9;
+}
+
+.subscribe-btn:hover{
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+}
+
+.description-btns{
+    margin-top: 20px;
+    width: 70%;
+    background-color: #F6E6D9;
+    display: flex;
+    justify-content: space-between;
+}
+
+.description{
+    margin-bottom: 45px;
+    border: 1px solid black;
+    width: 70%;
+    background-color: #FFF4EC;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.desc{
+    border: 1px solid black;
+    width: 33.33%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.desc.selected{
+    background-color: #3C422E;
+    color: #F6E6D9;
+}
+
+.harvest{
+    border: 1px solid black;
+    width: 33.33%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.harvest.selected{
+    background-color: #3C422E;
+    color: #F6E6D9;
+}
+
+
+.use{
+    border: 1px solid black;
+    width: 33.33%;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.use.selected{
+    background-color: #3C422E;
+    color: #F6E6D9;
+}
+
+.desc-text{
+    display: none;
+}
+
+.harvest-text{
+    display: none;
+}
+
+.use-text{
+    display: none;
+}
+
+.desc-text.visible{
+    display: block;
+}
+
+.harvest-text.visible{
+    display: block;
+}
+
+.use-text.visible{
+    display: block;
+}
+
+@media (max-width: 720px){
+    .carousel{
+        width: 100%;
+        height: auto;
+    }
+    .carousel-wrapper{
+        position: relative;
+        display: flex;
+    }
+    .carousel-image{
+        object-fit: cover;
+        width: 100%;
+        height: auto;
+    }
+    .carousel-button{
+        height: 40px;
+        width: 40px;
+    }
+    .right-content{
+        top: 27rem;
+        position: relative;
+        width: 100%;
+    }
+}
