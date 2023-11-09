@@ -28,17 +28,27 @@ function purchaseMethod(index){
     }
 }
 
+let dropDownOpen = false;
+let c=1;
+
 function openDropDown(){
-    const options = document.querySelectorAll('.frequency-item');
-    options.forEach(option=>option.classList.add('visible'));
+    if(!dropDownOpen){
+        const options = document.querySelectorAll('.frequency-item');
+        options.forEach(option => option.classList.add('visible'));
+        dropDownOpen = true;
+    }
+    else{
+        if(c%2==0){
+            dropDownOpen=false;
+        }
+    }
+    c++;
 }
 
 function selectOption(index){
     const options = document.querySelectorAll('.frequency-item');
     options.forEach(option=>option.classList.remove('visible'));
-    console.log(options);
     options[index].classList.add('visible');
-    console.log(options);
 }
 
 function selectDesc(index){

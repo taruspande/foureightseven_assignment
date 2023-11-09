@@ -219,6 +219,10 @@
     border-top-left-radius: 10px;
 }
 
+.desc:hover{
+    background-color: #FFF4EC;
+}
+
 .desc.selected{
     background-color: #3C422E;
     color: #F6E6D9;
@@ -229,6 +233,10 @@
     width: 33.33%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+}
+
+.harvest:hover{
+    background-color: #FFF4EC;
 }
 
 .harvest.selected{
@@ -242,6 +250,10 @@
     width: 33.33%;
     border-top-right-radius: 10px;
     border-top-left-radius: 10px;
+}
+
+.use:hover{
+    background-color: #FFF4EC;
 }
 
 .use.selected{
@@ -277,6 +289,8 @@
     .carousel{
         width: 100%;
         height: auto;
+        display: flex;
+        flex-direction: column;
     }
     .carousel-wrapper{
         position: relative;
@@ -285,14 +299,15 @@
     .carousel-image{
         object-fit: cover;
         width: 100%;
-        height: auto;
+        height: 100vh;
+        display: none;
     }
     .carousel-button{
         height: 40px;
         width: 40px;
     }
     .right-content{
-        top: 27rem;
+        top: 2rem;
         position: relative;
         width: 100%;
     }
